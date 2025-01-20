@@ -1580,10 +1580,10 @@ function redzlib:MakeWindow(Configs)
 	local Window, FirstTab = {}, false
 	function Window:CloseBtn()
 		local Dialog = Window:Dialog({
-			Title = "Đóng Scrpt",
-			Text = "Bạn Muốn Tắt Script Này Không? :((",
+			Title = "Đóng Ứng Dụng",
+			Text = "Bạn Muốn Tắt Script Này Không :((",
 			Options = {
-				{"Cos", function()
+				{"Có", function()
 					ScreenGui:Destroy()
 				end},
 				{"Không"}
@@ -1595,13 +1595,13 @@ function redzlib:MakeWindow(Configs)
 		WaitClick = true
 		
 		if Minimized then
-			MinimizeButton.Image = "rbxassetid://10734896206"
+			MinimizeButton.Image = "rbxassetid://110709797206"
 			CreateTween({MainFrame, "Size", SaveSize, 0.25, true})
 			ControlSize1.Visible = true
 			ControlSize2.Visible = true
 			Minimized = false
 		else
-			MinimizeButton.Image = "rbxassetid://10734924532"
+			MinimizeButton.Image = "rbxassetid://10709797206"
 			SaveSize = MainFrame.Size
 			ControlSize1.Visible = false
 			ControlSize2.Visible = false
@@ -2663,7 +2663,7 @@ function redzlib:MakeWindow(Configs)
 				Size = UDim2.new(1, -14, 0, 16),
 				AnchorPoint = Vector2.new(0.5, 1),
 				Position = UDim2.new(0.5, 0, 1, -7),
-				Text = "Kết Nối",
+				Text = "Sao Chép Link Để Tìm Kiếm Hỗ Trợ",
 				Font = Enum.Font.GothamBold,
 				TextSize = 12,
 				TextColor3 = Color3.fromRGB(220, 220, 220),
@@ -2682,7 +2682,7 @@ function redzlib:MakeWindow(Configs)
 					TextColor3 = Color3.fromRGB(150, 150, 150)
 				})task.wait(5)
 				SetProps(JoinButton, {
-					Text = "Copy Link Youtube",
+					Text = "Sao Chép Link Để Xem Và Tải Script Mới",
 					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
 					TextColor3 = Color3.fromRGB(220, 220, 220)
 				})ClickDelay = false
